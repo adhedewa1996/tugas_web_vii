@@ -1,5 +1,6 @@
 <pre>
 <?php
+
 	var_dump($_FILES);
 	$nama_file = $_FILES['gambar']['name'];
 	$asal_file = $_FILES['gambar']['tmp_name'];
@@ -13,17 +14,18 @@
 
 		include 'koneksi.php';
 
+		$id = $_POST['id'];
 		$nama_barang = $_POST['nama'];
 		$gambar = $tujuan_file;
 		$deskripsi = $_POST['deskripsi'];
 		$nama_pelapor = $_POST['nama_pelapor'];
 		$no_hp = $_POST['no_hp'];
 
-		$query = "insert into laporan_barang_hilang (nama_barang,gambar,deskripsi,nama_pelapor,no_hp_pelapor) values ('".$nama_barang."','".$gambar."','".$deskripsi."','".$nama_pelapor."','".$no_hp."')";
+		$query = "update laporan_barang_hilang set nama_barang='".$nama_barang."', gambar='".$gambar."', deskripsi='".$deskripsi."', nama_pelapor='".$nama_pelapor."', no_hp_pelapor='".$no_hp."' where id='".$id."'";
 
-		$insert = mysqli_query($koneksih,$query);
+		$update = mysqli_query($koneksih,$query);
 
-		if ($insert) {
+		if ($update) {
 			header('location:admin.php');
 		} else {
 			echo "Gommenne, insert wa Fail dest ! :(";
