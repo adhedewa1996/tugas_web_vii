@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 <?php
+=======
+<a href="unggah.php"> (+) Klik Here to Upload (admin) </a>
+
+<?php 
+>>>>>>> 5b4dd54384783312d11b31ad381fdff05079a1d3
 	include 'koneksi.php';
 
 	//session_start();
@@ -11,6 +17,7 @@
 	$hasil = mysqli_query($koneksih,$query);
 ?>
 
+<<<<<<< HEAD
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -74,3 +81,43 @@
 <script src="js/bootstrap.js" charset="utf-8"></script>
 </body>
 </html>
+=======
+<table border="1">
+	<tr align="center" >
+		<td> No </td>
+		<td> Nama </td>
+		<td> Gambar </td>
+		<td> Deskripsi </td>
+		<td> Nama Pelapor </td>
+		<td> No HP Pelapor </td>
+		<td> Aksi </td> 
+	</tr>
+	<?php while($data = mysqli_fetch_assoc($hasil)) { ?>
+	<tr align="center"> 
+		<td>
+			<?php echo $data['id'] ?> 
+		</td>
+		<td> 
+			<?php echo $data['nama_barang'] ?>
+		</td>
+		<td> 
+			<img src="<?php echo $data['gambar'] ?>" height="80" weight="80" >
+		</td>
+		<td> 
+			<?php echo $data['deskripsi'] ?>
+		</td>
+		<td>
+			<?php echo $data['nama_pelapor'] ?>
+		</td>
+		<td>
+			<?php echo $data['no_hp_pelapor'] ?>
+		</td>
+		<td>
+			<a href="ubah.php?id=<?php echo $data['id'] ?>"> Ubah </a>
+			&ensp;
+			<a onclick="return(confirm('Hountou Des Ka ??? (/!_!)~ '))" href="delete.php?id=<?php echo $data['id'] ?>"> Hapus </a>
+		</td>
+	</tr>
+	<?php } ?>
+</table>
+>>>>>>> 5b4dd54384783312d11b31ad381fdff05079a1d3

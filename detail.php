@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 	include 'koneksi.php';
 
@@ -6,12 +7,25 @@
 		//arahkan ke login
 		header('location:login.php');
 	}
+=======
+<h1 align="center"> Detail Barang </h1>
+
+<?php 
+	include 'koneksi.php';
+
+	//session_start();
+	//if(!isset($_SESSION['id'])) {
+	//	//arahkan ke login
+	//	header('location:login.php');
+	//}
+>>>>>>> 5b4dd54384783312d11b31ad381fdff05079a1d3
 
 	$id = $_GET['id'];
 	$query = "SELECT * FROM laporan_barang_hilang WHERE id='".$id."'";
 	$hasil = mysqli_query($koneksih,$query);
 ?>
 
+<<<<<<< HEAD
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -115,3 +129,29 @@
 
 <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
 <script src="js/bootstrap.js" charset="utf-8"></script>
+=======
+<table border="0" align="center">
+	<tr align="center"> 
+		<?php if ($data = mysqli_fetch_assoc($hasil)) { ?>
+		<td> 
+			<br>
+			<img src="<?php echo $data['gambar'] ?>" height="200px" width="200px" >
+			<h4>
+				<?php echo $data['nama_barang'] ?>
+			</h4> 
+			<a href="index.php"> 
+				<button type="button"> <~ Kembali </button> 
+			</a>
+			<a href="#"> 
+				<button type="button"> Ambil ~> </button> 
+			</a>
+		</td>
+		<td align="left"> 
+			<?php echo "Deskripsi     : ".$data['deskripsi'] ?> <br>
+			<?php echo "Nama Pelapor  : ".$data['nama_pelapor'] ?> <br>
+			<?php echo "No HP Pelapor : ".$data['no_hp_pelapor'] ?> <br>
+		</td>
+		<?php } ?>
+	</tr>
+</table>
+>>>>>>> 5b4dd54384783312d11b31ad381fdff05079a1d3
