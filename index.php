@@ -31,7 +31,7 @@
 
 <div class="p-3 mb-2 bg-primary text-black">
 	<!-- Navigation -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
 		<div class="container">
 			<a class="navbar-brand" href="#">BarangkuHilang.com</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,8 +41,7 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item active">
 					<a class="nav-link" href="index.php">Beranda <span class="sr-only">(current)</span>
-					</a>
-				</li>
+					</a>				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="katalog.php" style="color:lime">Katalog</a>
 				</li>
@@ -75,7 +74,7 @@
 							</ol>
 							<div class="carousel-inner" role="listbox">
 								<div class="carousel-item active">
-									<img class="d-block img-fluid" src="upload/logo.jpg" alt="First slide" height="900px" width="373px" align="center">
+									<img class="d-block img-fluid" src="upload/kucing.jpg" alt="First slide" height="900px" width="373px" align="center">
 								</div>
 								<div class="carousel-item">
 									<img class="d-block img-fluid" src="upload/meong.jpg" alt="Second slide" height="900px" width="350px" align="center">
